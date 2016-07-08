@@ -139,7 +139,7 @@ void irq_domain_remove(struct irq_domain *domain)
 {
 	mutex_lock(&irq_domain_mutex);
 
-	WARN_ON(!radix_tree_empty(&domain->revmap_tree));
+	WARN_ON(!radix_tree_is_empty(&domain->revmap_tree));
 
 	list_del(&domain->link);
 

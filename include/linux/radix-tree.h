@@ -124,7 +124,7 @@ do {									\
 	(root)->rnode = NULL;						\
 } while (0)
 
-static inline bool radix_tree_empty(struct radix_tree_root *root)
+static inline bool radix_tree_is_empty(struct radix_tree_root *root)
 {
 	return root->rnode == NULL;
 }
